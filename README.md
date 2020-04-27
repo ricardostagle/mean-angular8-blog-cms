@@ -25,7 +25,7 @@ $ sudo npm install -g @angular/cli
 
 ```bash
 $ npm install --save ckeditor4-angular
-
+```
 ```bash
 $ npm install mat-contenteditable --save
 ```
@@ -44,15 +44,14 @@ $ ng serve
 
 ## Check your website
 Later you can open the browser on the local site
-http://localhost:4200/login
-http://localhost:4200/home
-http://localhost:4200/post
-http://localhost:4200/user
-http://localhost:4200/category
+* http://localhost:4200/login
+* http://localhost:4200/home
+* http://localhost:4200/post
+* http://localhost:4200/user
+* http://localhost:4200/category
 
 ## Tech Stack
 * AngularJS
 * Node.js
 * Express.js
-* ui-Router
 * Passport.js
