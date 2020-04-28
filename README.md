@@ -17,17 +17,38 @@ Run command:
 ```bash
 $ npm install
 ```
+Update your node:
+```bash
+$ n latest
+$ sudo n latest
+```
 
-Go to the client folder
+Go to the client folder to install angular 8
 ```bash
 $ sudo npm install -g @angular/cli
 ```
-
+Update angular 8 dependencies
 ```bash
-$ npm install --save ckeditor4-angular
+$ ng update --all
+```
+```bash
+$ npm i --save @ckeditor/ckeditor5-angular @ckeditor/ckeditor5-build-balloon
 ```
 ```bash
 $ npm install mat-contenteditable --save
+```
+
+Commands to check and fix some posible errors
+```bash
+npm ls
+```
+```bash
+npm audit --audit-level=moderate
+```
+
+Command to remove cache
+```bash
+npm cache clean --force
 ```
 
 # Start server directions 
