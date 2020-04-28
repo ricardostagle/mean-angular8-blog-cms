@@ -32,7 +32,12 @@ $ npm install mat-contenteditable --save
 
 # Start server directions 
 
-Execute the next command on root folder to start express :
+Execute the next command to start mongoDB server (mongo previously installed):
+```bash
+$ mongod
+```
+
+Execute the next command on root folder level to start express :
 ```bash
 $ npm start
 ```
@@ -51,7 +56,14 @@ Later you can open the browser on the local site
 * http://localhost:4200/category
 
 ## Tech Stack
-* AngularJS
+
 * Node.js
+* MongoDB
+* Angular 8
+* Angular CLI
 * Express.js
 * Passport.js
+* Mongoose.js
+* CKEditor 4
+* Terminal or Command Line
+* IDE or Text Editor
