@@ -23,19 +23,17 @@ $ n latest
 $ sudo n latest
 ```
 
-Go to the client folder to install angular 8
+Go to the client folder to install angular
 ```bash
-$ sudo npm install -g @angular/cli
+$ sudo npm install -g @angular/cli@latest
 ```
-Update angular 8 dependencies
+Update or check angular dependencies
 ```bash
 $ ng update --all
 ```
+Update before following dependencies if this is needed.
 ```bash
-$ npm i --save @ckeditor/ckeditor5-angular @ckeditor/ckeditor5-build-balloon
-```
-```bash
-$ npm install mat-contenteditable --save
+$ ng update @angular-devkit/build-angular @angular/compiler-cli
 ```
 
 Commands to check and fix some posible errors
