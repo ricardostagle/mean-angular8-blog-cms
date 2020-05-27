@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { HomeComponent } from './home/home.component';
+import { BlogComponent } from './blog/blog.component';
 import { DetailsComponent } from './details/details.component';
 import { CategoryComponent } from './category/category.component';
 import { PostComponent } from './post/post.component';
@@ -16,6 +17,10 @@ import { BycategoryComponent } from './bycategory/bycategory.component';
 import { AuthGuard } from './auth/auth.guard';
 import { AdminComponent } from './admin/admin.component';
 
+import { ContactComponent } from './contact/contact.component';
+import { UserComponent } from './auth/user/user.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+
 
 const routes: Routes = [
   {
@@ -27,6 +32,16 @@ const routes: Routes = [
     path: 'home',
     component: HomeComponent,
     data: { title: 'Blog Home' }
+  },
+  {
+    path: 'blog',
+    component: BlogComponent,
+    data: { title: 'Blog' }
+  },
+  {
+    path: 'contact',
+    component: ContactComponent,
+    data: { title: 'Contact' }
   },
   {
     path: 'admin',
@@ -101,6 +116,21 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     component: PostEditComponent,
     data: { title: 'Post Edit' }
+  },
+  {  
+    path: 'user',
+    canActivate: [AuthGuard],
+    component: UserComponent,
+    data: { title: 'User' }
+  },
+  { 
+    path: '404', 
+    component: NotFoundComponent,
+    data: { title: '404 - Not found page' }  
+  },
+  { 
+    path: '**', 
+    redirectTo: '/404'
   }
 ];
 

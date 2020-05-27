@@ -39,6 +39,14 @@ import { BycategoryComponent } from './bycategory/bycategory.component';
 import { CKEditorModule } from 'ckeditor4-angular';
 import { MatContenteditableModule } from 'mat-contenteditable';
 import { AdminComponent } from './admin/admin.component';
+import { BlogComponent } from './blog/blog.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { UserComponent } from './auth/user/user.component';
+import { ParallaxDirective } from './parallax.directive';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +64,14 @@ import { AdminComponent } from './admin/admin.component';
     PostAddComponent,
     PostEditComponent,
     BycategoryComponent,
-    AdminComponent
+    AdminComponent,
+    BlogComponent,
+    NavbarComponent,
+    FooterComponent,
+    NotFoundComponent,
+    UserComponent,
+    ParallaxDirective,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -80,7 +95,8 @@ import { AdminComponent } from './admin/admin.component';
     MatSelectModule,
     MatOptionModule,
     CKEditorModule,
-    MatContenteditableModule
+    MatContenteditableModule,
+    FontAwesomeModule
   ],
   providers: [
     {
