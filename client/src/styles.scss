@@ -83,9 +83,6 @@ table {
   margin: 5px;
 }
 
-
-
-
 .is-dark {
   text-transform: uppercase;
   background-color: #1A1D22 !important;
@@ -125,7 +122,6 @@ p.copy_right_text{
 .sticky{
   position: fixed;
   top: 0;
-  overflow: hidden;
   z-index: 10;
   width: 100%;
 }
@@ -134,4 +130,9 @@ p.copy_right_text{
   margin-top:20px;
   position: relative;
   padding: 0;
+}
+
+.button.is-primary,
+.button.is-primary:hover {
+  background-color: #b71f75;
 }

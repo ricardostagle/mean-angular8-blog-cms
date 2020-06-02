@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
+import { UserComponent } from './auth/user/user.component';
 import { HomeComponent } from './home/home.component';
 import { DetailsComponent } from './details/details.component';
 import { CategoryComponent } from './category/category.component';
@@ -44,9 +45,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { UserComponent } from './auth/user/user.component';
 import { ParallaxDirective } from './parallax.directive';
 import { ContactComponent } from './contact/contact.component';
+import { EsEsComponent } from './es-es/es-es.component';
 
 @NgModule({
   declarations: [
@@ -71,7 +72,8 @@ import { ContactComponent } from './contact/contact.component';
     NotFoundComponent,
     UserComponent,
     ParallaxDirective,
-    ContactComponent
+    ContactComponent,
+    EsEsComponent
   ],
   imports: [
     BrowserModule,

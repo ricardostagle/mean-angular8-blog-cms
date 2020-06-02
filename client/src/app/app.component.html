@@ -1,5 +1,6 @@
 <app-navbar></app-navbar>
-<mat-toolbar>
+
+<mat-toolbar *ngIf="router.url === '/admin'">  
   <button mat-button [matMenuTriggerFor]="menu">Menu</button>
   <mat-menu #menu="matMenu">
     <div *ngIf="loginStatus === false">
@@ -14,11 +15,6 @@
     </div>
   </mat-menu>
 </mat-toolbar>
-  <section class="hero is-small is-bold is-light">
-    <div class="hero-body">
-      <div class="container">
-        <router-outlet></router-outlet>
-      </div>
-    </div>
-  </section>
+
+<router-outlet></router-outlet>
 <app-footer></app-footer>

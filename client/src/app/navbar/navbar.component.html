@@ -1,6 +1,7 @@
 <nav class="navbar is-dark is-centered is-fullwidth"
   #stickyMenu
-  [class.sticky] = "sticky">
+  [class.sticky] = "sticky" 
+  (scroll)="onWindowScroll($event);">
   <div class="navbar-brand">
     <a class="navbar-item" href="/">
       <img src="assets/images/logo.png" alt="DominioWeb.com.mx logo">
@@ -15,16 +16,10 @@
 
   <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start">
-      <a class="navbar-item" href="/">Home</a>
+      <a class="navbar-item" routerLink="">Home</a>
       <a class="navbar-item" href="#ABOUT">About</a>
       <a class="navbar-item" href="#FEATURES">Services</a>
       <a class="navbar-item" href="#CONTACT">Contact</a>
-
-      <!-- HIDE OPTION MENU
-
-      <a class="navbar-item" href="/en-mx/">
-        Spanish
-      </a>
 
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">
@@ -32,23 +27,13 @@
         </a>
 
         <div class="navbar-dropdown">
-          <a class="navbar-item">
-            About
-          </a>
-          <a class="navbar-item">
-            Jobs
-          </a>
-          <a class="navbar-item">
-            Contact
-          </a>
+          <a class="navbar-item" href="/es-es/">Spanish</a>
+          <a class="navbar-item" routerLink="users">Users</a>
+          <a class="navbar-item" routerLink="blog">Blog</a>
           <hr class="navbar-divider">
-          <a class="navbar-item">
-            Report an issue
-          </a>
+          <a class="navbar-item" routerLink="contact">Contact Form</a>
         </div>
       </div>
-
-      -->
 
     </div>
 

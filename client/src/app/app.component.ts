@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Category } from './category/category';
 import { HomeService } from './home.service';
 import { AuthService } from './auth.service';
+import { UserService } from './user.service';
 
 @Component({
   selector: 'app-root',
@@ -13,8 +14,10 @@ export class AppComponent implements OnInit {
   title = 'client';
   categories: Category[] = [];
   loginStatus = false;
+  users;
 
-  constructor(private api: HomeService, private authService: AuthService, private router: Router) { }
+  constructor(private api: HomeService, private authService: AuthService, private userService: UserService, private router: Router) { 
+  }
 
   ngOnInit() {
     this.authService.isLoggedIn.subscribe((status: any) => {
@@ -25,13 +28,14 @@ export class AppComponent implements OnInit {
         this.loginStatus = false;
       }
     });
+
     this.api.getCategories()
       .subscribe((res: any) => {
         this.categories = res;
         console.log(this.categories);
       }, err => {
         console.log(err);
-      });
+    });
   }
 
   logout() {

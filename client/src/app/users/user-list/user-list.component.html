@@ -1,0 +1,26 @@
+<section class="hero is-small is-bold is-light">
+  <div class="hero-body">
+    <div class="container">
+
+<h2 class="title">Guthub user list - Lazy Loading an Angular Section</h2>
+<h2 class="subtitle">https://api.github.com/users?per_page=10</h2>
+<section class="section">
+  <div class="container">
+    <div class="columns is-multiline">
+
+      <!-- loop over our users and give them each a card -->
+      <div class="column is-4" *ngFor="let user of users | async">
+        <div class="card">
+          <div class="card-content">
+            <a routerLink="/users/{{ user.login }}">{{ user.login }}</a>
+          </div>      
+        </div>      
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    </div>
+  </div>
+</section>

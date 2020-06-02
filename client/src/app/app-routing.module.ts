@@ -20,6 +20,7 @@ import { AdminComponent } from './admin/admin.component';
 import { ContactComponent } from './contact/contact.component';
 import { UserComponent } from './auth/user/user.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { EsEsComponent } from './es-es/es-es.component';
 
 
 const routes: Routes = [
@@ -32,6 +33,11 @@ const routes: Routes = [
     path: 'home',
     component: HomeComponent,
     data: { title: 'Blog Home' }
+  },
+  {
+    path: 'es-es',
+    component: EsEsComponent,
+    data: { title: 'Español' }
   },
   {
     path: 'blog',
@@ -116,6 +122,10 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     component: PostEditComponent,
     data: { title: 'Post Edit' }
+  },
+  {
+    path: 'users',
+    loadChildren: './users/users.module#UsersModule'
   },
   {  
     path: 'user',

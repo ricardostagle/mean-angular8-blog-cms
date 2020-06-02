@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild, ElementRef, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +7,39 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild('stickyMenu') menuElement: ElementRef;
 
-  ngOnInit(): void {
+  sticky: boolean = false;
+  elementPosition: any;
+
+  constructor( ) {
+
   }
+
+  ngOnInit() {
+
+  }
+
+  ngAfterViewInit(){
+    this.elementPosition = this.menuElement.nativeElement.offsetTop;
+  }
+
+  @HostListener('window:scroll', ['$event'])
+    handleScroll(){
+      const windowScroll = window.pageYOffset;
+      let element = document.querySelector('.navbar');
+      element.style.display = "none";
+      if(windowScroll >= (this.elementPosition + 150)){
+        this.sticky = true;
+        /*element.style.display = "flex";*/
+      } else {
+        this.sticky = false;
+        
+      }
+    }
+
+    onWindowScroll(e) {
+ 
+    }
 
 }
